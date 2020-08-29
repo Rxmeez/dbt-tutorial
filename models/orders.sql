@@ -3,7 +3,7 @@
 
 with payments as (
 
-    select * from {{ ref('stg_customers') }}
+    select * from {{ ref('stg_payments') }}
 
 ),
 
@@ -32,7 +32,7 @@ final as (
         orders.order_id,
         orders.customer_id,
         orders.order_date,
-        orders.status
+        orders.status,
         order_payments.total_payment_amount
 
     from orders

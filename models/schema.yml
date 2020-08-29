@@ -1,5 +1,11 @@
 version: 2
 
+sources:
+  - name: jaffle_shop
+    tables:
+      - name: orders
+      - name: customers
+
 models:
   - name: customers
     description: "{{ doc('customers') }}"
